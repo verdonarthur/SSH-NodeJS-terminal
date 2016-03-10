@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSH TERMINAL</title>
+
+  <link rel="stylesheet" href="./css/styles.css" media="screen" title="no title" charset="utf-8">
+
+  <!-- Bootstrap -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!--SCRIPT-->
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active mainTab"><a>terminal 1</a></li>
+        <li role="presentation" class="active mainTab"><a>+</a></li>
+      </ul>
+      <div id="menu" class="btn-group">
+        <button  class="btn" value="open connection" onclick="ipc.send('toggle-sshconnection-view');">open</button>
+      </div>
+      <div id="mainWindow" class="well">
+        $
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
